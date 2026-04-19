@@ -27,17 +27,6 @@ const WhatsAppWidget = () => {
   const markNumber = '447796601576';
   const margaretNumber = '447742042031';
 
-  const quickMessages = [
-    {
-      label: '🏡 Book a stay',
-      href: `${waBase}${markNumber}?text=Hi%20there%2C%20I'd%20like%20to%20book%20a%20stay%20at%20The%20Moorings%20Cottage`,
-    },
-    {
-      label: '❓ Ask a question',
-      href: `${waBase}${markNumber}?text=Hi%20there%2C%20I%20have%20a%20question%20about%20The%20Moorings%20Cottage`,
-    },
-  ];
-
   return (
     <>
       <style>{`
@@ -194,7 +183,7 @@ const WhatsAppWidget = () => {
             <div className="wa-avatar">🏡</div>
             <div>
               <p className="wa-name">The Moorings Cottage</p>
-              <p className="wa-status">💬 Typically replies quickly</p>
+              <p className="wa-status">💬 Typically replies within minutes</p>
             </div>
             <button className="wa-close" onClick={toggleWidget} aria-label="Close">✕</button>
           </div>
@@ -202,19 +191,34 @@ const WhatsAppWidget = () => {
           {/* Bubble */}
           <div className="wa-body">
             <div className="wa-bubble">
-              Hi there, How would you like to get in touch?
+              Hey there, I'm contacting you regarding The Moorings Cottage. 🏡
               <div className="wa-time">Just now</div>
             </div>
           </div>
 
           {/* Buttons */}
           <div className="wa-btns">
-            <p className="wa-section-label">Message us</p>
-            {quickMessages.map((btn) => (
-              <a key={btn.label} className="wa-btn wa-btn-green" href={btn.href} target="_blank" rel="noopener noreferrer">
-                {btn.label}
-              </a>
-            ))}
+            <p className="wa-section-label">MESSAGE US ON WhatsApp</p>
+
+            {/* Message Mark */}
+            <a
+              className="wa-btn wa-btn-green"
+              href={`${waBase}${markNumber}?text=Hey%20there%2C%20I'm%20contacting%20you%20regarding%20The%20Moorings%20Cottage.`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 Message Mark on WhatsApp
+            </a>
+
+            {/* Message Margaret */}
+            <a
+              className="wa-btn wa-btn-green"
+              href={`${waBase}${margaretNumber}?text=Hey%20there%2C%20I'm%20contacting%20you%20regarding%20The%20Moorings%20Cottage.`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 Message Margaret on WhatsApp
+            </a>
 
             <p className="wa-section-label" style={{ marginTop: 4 }}>Other ways</p>
 
@@ -226,26 +230,6 @@ const WhatsAppWidget = () => {
               rel="noopener noreferrer"
             >
               📅 Book via calendar
-            </a>
-
-            {/* Call / WhatsApp Mark */}
-            <a
-              className="wa-btn wa-btn-blue"
-              href={`${waBase}${markNumber}?text=Hi%20there%2C%20I%20have%20an%20enquiry%20about%20The%20Moorings%20Cottage`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📞 WhatsApp Mark: +44 (0)7796 601576
-            </a>
-
-            {/* Call / WhatsApp Margaret */}
-            <a
-              className="wa-btn wa-btn-blue"
-              href={`${waBase}${margaretNumber}?text=Hi%20there%2C%20I%20have%20an%20enquiry%20about%20The%20Moorings%20Cottage`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📞 WhatsApp Margaret: +44 (0)7742 042031
             </a>
 
             {/* Email */}
