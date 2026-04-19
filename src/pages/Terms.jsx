@@ -18,8 +18,8 @@ const Terms = () => {
                 <li>The remaining balance is due 8 weeks before your arrival date</li>
                 <li>Bookings are confirmed upon receipt of deposit payment</li>
                 <li>Change-over days are Friday, except for Christmas and New Year</li>
-                <li>Check-in time: 5pm onwards</li>
-                <li>Check-out time: 9am</li>
+                <li>Check-in time: 3pm onwards</li>
+                <li>Check-out time: 9.30am</li>
               </ul>
             </div>
 
