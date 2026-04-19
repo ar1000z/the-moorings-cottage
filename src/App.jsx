@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { usePageTracking } from './hooks/useAnalytics';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import WhatsAppWidget from './components/WhatsAppWidget';
 import Home from './pages/Home';
 import Cottage from './pages/Cottage';
 import Gallery from './pages/Gallery';
@@ -60,6 +61,8 @@ function App() {
               </main>
               <Banner />
               <Footer />
+              {/* WhatsApp contact widget — visible on every page */}
+              <WhatsAppWidget />
             </div>
           </AnalyticsWrapper>
         </PostHogProvider>
